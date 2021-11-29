@@ -25,4 +25,15 @@ class SignupPageLocator():
 
     LOGIN_BTN_LOCATOR = (By.XPATH,'//button/span[text() = "Login"]/..')
 
+class MainPageLocator():
+
+    CONTACT_PHONE_LOCATOR = (By.XPATH, '//a[@href = "tel:+1-234-56789"]')
+
+    CONTACT_EMAIL_LOCATOR = (By.XPATH,'//a[@href = "mailto:info@travelagency.com"]')
+
+    HOTEL_BUTN_LOCATOR = (By.XPATH, '//a[contains(text(),"Hotels")]')
+
+    HOTEL_PAGE_MAIN_TEXT_LOCATOR =(By.XPATH, '//h2[contains(text(),"SEARCH FOR BEST HOTELS")]')
+
+
 
