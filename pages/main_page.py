@@ -4,6 +4,7 @@ import time
 from .locators import MainPageLocatorHeader
 from .base_page import BasePage
 from selenium.webdriver.common.action_chains import ActionChains
+from .locators import MainPageHeaderTABLocators
 
 class MainPage(BasePage):
 
@@ -66,7 +67,6 @@ class MainPage(BasePage):
         element_hover_over = self.browser.find_element(*MainPageLocatorHeader.COMPANY_DROPDOWN_LOCATOR)
         hover = ActionChains(self.browser).move_to_element(element_hover_over)
         hover.perform()
-        time.sleep(8)
         link = self.browser.find_element(*MainPageLocatorHeader.ABOUTUS_COMPANY_BTN)
         link.click()
 
@@ -95,3 +95,26 @@ class MainPage(BasePage):
     def should_be_on_FAQ_page_text_present(self):
         assert self.is_element_present(*MainPageLocatorHeader.FAQ_PAGE_MAIN_TEXT), "User is not on FAQ page or text is " \
                                                                                    "not present"
+
+    def should_see_quick_order_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.MAIN_TAB_LOCATOR),"Quick order tab is not present"
+
+
+    def should_see_hotels_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.HOTELS_TAB_LOCATOR),"Hotels tab is not present"
+
+
+    def pressing_flights_tab(self):
+        link = self.browser.find_element(*MainPageHeaderTABLocators.FLIGHTS_TAB_LOCATOR)
+        link.click()
+
+    def should_be_on_flights_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.FLIGHTS_TAB_PRESSENT_LOCATOR),"User is not on Flights" \
+                                                                                                " Tab"
+
+    def pressing_tours_tab(self):
+        link = self.browser.find_element(*MainPageHeaderTABLocators.TOURS_TAB_LOCATOR)
+        link.click()
+
+    def should_be_on_tours_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.TOURS_TAB_PRESSENT_LOCATOR)

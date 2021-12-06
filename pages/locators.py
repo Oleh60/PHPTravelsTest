@@ -74,5 +74,19 @@ class MainPageLocatorHeader():
     FAQ_PAGE_MAIN_TEXT = (By.XPATH, '//h3[contains(text(),"FAQ")]')
     #end of temporary locators
 
+class MainPageHeaderTABLocators():
+
+    MAIN_TAB_LOCATOR = (By.XPATH, '//div[@class = "section-tab fade-in glass"]')
+
+    HOTELS_TAB_LOCATOR = (By.XPATH, '//button[@id = "hotels-tab"]')
+
+    FLIGHTS_TAB_LOCATOR = (By.XPATH,'//button[@aria-controls = "flights"]')
+
+    FLIGHTS_TAB_PRESSENT_LOCATOR = (By.XPATH, '//div[@id = "onereturn"]')
+
+    TOURS_TAB_LOCATOR = (By.XPATH, '//button[@id = "tours-tab"]')
+
+    TOURS_TAB_PRESSENT_LOCATOR = (By.XPATH, '//form[@id = "tours-search"]')
+
 
 
