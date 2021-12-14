@@ -23,6 +23,6 @@ class TestSignupForm():
         firstname_text = "User" + str(time.time())
         email = str(time.time()) + "FakeEmail@google.com"
         password = "3434567"
-        page.create_valid_user(email,password,firstname_text)
-        page.user_login(email,password)
+        page.create_valid_user(email, password, firstname_text)
+        page.user_login(email, password)
         page.should_see_firstname_in_dashboard(firstname_text)

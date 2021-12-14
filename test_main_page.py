@@ -79,23 +79,41 @@ class TestMainPage():
         page.open()
         page.should_see_quick_order_tab()
 
+    #test only on presentation because hotel button is open by default
     def test_hotels_tab_is_present(self, browser):
         page = MainPage(browser)
         page.open()
         page.should_see_hotels_tab()
 
 
-    def test_flights_tab_is_present_and_clikable(self, browser):
+    def test_flights_tab_is_present_and_clickable(self, browser):
         page = MainPage(browser)
         page.open()
         page.pressing_flights_tab()
         page.should_be_on_flights_tab()
 
 
-    def test_tours_tab_is_present_and_clikable(self, browser):
+    def test_tours_tab_is_present_and_clickable(self, browser):
         page = MainPage(browser)
         page.open()
         page.pressing_tours_tab()
-        time.sleep(4)
         page.should_be_on_tours_tab()
+
+
+    def test_cars_tab_is_present_and_clickable(self, browser):
+        page = MainPage(browser)
+        page.open()
+        page.pressing_cars_tab()
+        page.should_be_on_cars_tab()
+
+
+    def test_visa_tab_is_present_and_clickable(self, browser):
+        page = MainPage(browser)
+        page.open()
+        page.pressing_visa_tab()
+        time.sleep(4)
+        page.should_be_on_visa_tab()
+
+
+
 

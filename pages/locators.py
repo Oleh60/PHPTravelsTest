@@ -88,5 +88,13 @@ class MainPageHeaderTABLocators():
 
     TOURS_TAB_PRESSENT_LOCATOR = (By.XPATH, '//form[@id = "tours-search"]')
 
+    CARS_TAB_LOCATOR = (By.XPATH, '//button[@id = "cars-tab"]')
+
+    CARS_TAB_PRESENT_LOCATOR = (By.XPATH, '//span[@id = "select2-carfrom-container"]')
+
+    VISA_TAB_LOCATOR = (By.XPATH, '//button[@id = "visa-tab"]')
+
+    VISA_TAB_PRESENT_LOCATOR = (By.XPATH, '//span[@id="select2-from_country-container"]')
+
 
 

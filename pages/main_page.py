@@ -117,4 +117,19 @@ class MainPage(BasePage):
         link.click()
 
     def should_be_on_tours_tab(self):
-        assert self.is_element_present(*MainPageHeaderTABLocators.TOURS_TAB_PRESSENT_LOCATOR)
+        assert self.is_element_present(*MainPageHeaderTABLocators.TOURS_TAB_PRESSENT_LOCATOR),"User is not on Tours Tab"
+
+    def pressing_cars_tab(self):
+        link = self.browser.find_element(*MainPageHeaderTABLocators.CARS_TAB_LOCATOR)
+        link.click()
+
+    def should_be_on_cars_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.CARS_TAB_PRESENT_LOCATOR),"User is not on Cars Tab"
+
+    def pressing_visa_tab(self):
+        link = self.browser.find_element(*MainPageHeaderTABLocators.VISA_TAB_LOCATOR)
+        link.click()
+
+    def should_be_on_visa_tab(self):
+        assert self.is_element_present(*MainPageHeaderTABLocators.VISA_TAB_PRESENT_LOCATOR), "User is not on Visa Tab"
+
